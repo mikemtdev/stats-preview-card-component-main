@@ -1,0 +1,108 @@
+@use './abstracts' as a;
+@import url('https://fonts.google.com/specimen/Inter');
+@import url('https://fonts.google.com/specimen/Lexend+Deca');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Inter';
+  font-size: a.$Base-Font;
+  background-color: a.$Primary-dark-blue;
+}
+.container {
+  margin: 10%;
+}
+.card {
+  background-color: a.$Soft-violet;
+  border-radius: 0.6rem;
+  background-color: a.$Dark-desaturated-blue;
+  color: a.$White;
+
+  .header_img_mobile {
+    width: 80vw;
+    min-height: 35vh;
+    background-image: url('../images/image-header-mobile.jpg');
+    background-size: cover;
+    background-color: a.$Soft-violet;
+    background-repeat: no-repeat;
+    border-top-right-radius: 0.6rem;
+    border-top-left-radius: 0.6rem;
+    background-blend-mode: hard-light;
+  }
+
+  .text {
+    margin: 10%;
+    padding-bottom: 10%;
+
+    text-align: center;
+    h1 {
+      margin-bottom: 5%;
+      span {
+        color: a.$Soft-violet;
+      }
+    }
+    p {
+      margin-bottom: 5%;
+      line-height: 1.5;
+      color: a.$Slightly-transparen-white;
+    }
+    .stats {
+      margin-bottom: 1rem;
+    }
+    .figure {
+      margin: 2%;
+    }
+
+    .figure_description {
+      font-weight: 400;
+      color: a.$Slightly-transparen-white;
+      text-transform: uppercase;
+    }
+    .stats:nth-last-child(1) {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.font-white {
+  color: white;
+}
+
+@media screen and (min-width: a.$Desktop-viewport) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .header_img_mobile {
+      width: 50vh;
+      height: 100%;
+      background-image: url('../images/image-header-mobile.jpg');
+      background-size: cover;
+      background-color: a.$Soft-violet;
+      background-repeat: no-repeat;
+      border-top-left-radius: 0;
+
+      border-top-right-radius: 0.6rem;
+      border-bottom-right-radius: 0.6rem;
+      background-blend-mode: hard-light;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0;
+
+      text-align: left;
+    }
+    .header_description {
+      margin-bottom: 10%;
+    }
+    .stats_container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
