@@ -71,12 +71,18 @@ body {
 .font-white {
   color: white;
 }
-
+@media screen and (min-width: 600px) {
+  .card {
+    .stats_container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
 @media screen and (min-width: a.$Desktop-viewport) {
   .card {
     display: flex;
     flex-direction: row-reverse;
-
     .header_img_mobile {
       width: 50vh;
       height: 100%;
